@@ -1,6 +1,6 @@
-import React from "react";
-import BlogPostPaginator from "@theme-original/BlogPostPaginator";
-import Twikoo from "@site/src/components/Twikoo";
+import React from 'react';
+import BlogPostPaginator from '@theme-original/BlogPostPaginator';
+import Twikoo from '@site/src/components/Twikoo';
 
 export default function BlogPostPaginatorWrapper(props) {
   return (
