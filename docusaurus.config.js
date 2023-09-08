@@ -74,10 +74,11 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
+          {to: '/archive', label: '归档', position: 'left'},
+          {to: '/tags', label: '标签', position: 'left'},
           {to: '/message', label: '留言板', position: 'left'},
           {to: '/tools', label: '工具箱', position: 'left'},
           {to: '/awesome-software', label: '好用的软件', position: 'left'},
-          {to: '/tags', label: '标签', position: 'left'},
         ],
       },
       footer: {
