@@ -39,7 +39,6 @@ export default defineConfig({
             label: "Authors",
             type: "string",
             required: true,
-            list: true,
           },
           {
             name: "date",
