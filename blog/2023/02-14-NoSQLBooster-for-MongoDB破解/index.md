@@ -5,6 +5,8 @@ tags: [软件]
 title: NoSQLBooster for MongoDB 破解
 ---
 
+import Image from '@theme/IdealImage';
+
 > macos、windows、linux 通用
 <!-- truncate -->
 ## 工作原理
@@ -43,7 +45,7 @@ $ asar pack app app.asar
 
 1. 重启 NoSQLBooster for MongoDB
 
-![image](./image.png)
+<Image img={require("./image.png")} />
 
 ## 关闭自动更新
 

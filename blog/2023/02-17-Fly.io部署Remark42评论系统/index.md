@@ -4,6 +4,9 @@ slug: flyio-deploy-remark42
 tags: [服务器]
 title: Fly.io 部署 Remark42 评论系统
 ---
+
+import Image from '@theme/IdealImage';
+
 [Fly.io](http://Fly.io) 免费计划包含：
 
 - 共3个单核256兆内存的应用和机器
@@ -167,8 +170,7 @@ title: Fly.io 部署 Remark42 评论系统
     
     dashboard 应用里左边选 Certificates，需要在域名解析下添加一条 txt 记录，txt 记录验证完删了就行
     
-
-![image](./image.png)
+<Image img={require("./image.png")} />
 
 ## Remark42 备份文件传输
 

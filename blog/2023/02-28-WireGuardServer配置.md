@@ -55,6 +55,12 @@ AllowedIPs = 192.168.6.2/32
 
 这个项目可以通过网页配置 https://github.com/ngoduykhanh/wireguard-ui
 
+:::info
+
+不需要复杂配置的话推荐 [WireGuard Easy](https://github.com/wg-easy/wg-easy)
+
+:::
+
 1. 根据系统版本下载 `wireguard-ui` 二进制文件，例如 https://github.com/ngoduykhanh/wireguard-ui/releases/download/v0.4.0/wireguard-ui-v0.4.0-linux-amd64.tar.gz 
 2. 启动
 

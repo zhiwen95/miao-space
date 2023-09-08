@@ -70,8 +70,11 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
-          {to: '/', label: '首页', position: 'left'},
-        ],
+          {to: '/message', label: '留言板', position: 'left'},
+          {to: '/tools', label: '工具箱', position: 'left'},
+          {to: '/awesome-software', label: '好用的软件', position: 'left'},
+          {to: '/tags', label: '标签', position: 'left'},
+      ],
       },
       footer: {
         style: 'dark',
@@ -82,6 +85,17 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
+
+  plugins: [
+    [
+      '@docusaurus/plugin-ideal-image',
+      {
+        max: 770,
+        min: 375,
+        disableInDev: false,
+      },
+    ],
+  ],
 };
 
 module.exports = config;
