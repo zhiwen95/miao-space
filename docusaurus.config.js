@@ -54,14 +54,11 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      }),
-      '@docusaurus/preset-classic',
-      {
         gtag: {
           trackingID: 'G-L81BHCQ9YW',
           anonymizeIP: true,
         },
-      },
+      }),
     ],
   ],
 
@@ -81,7 +78,7 @@ const config = {
           {to: '/tools', label: '工具箱', position: 'left'},
           {to: '/awesome-software', label: '好用的软件', position: 'left'},
           {to: '/tags', label: '标签', position: 'left'},
-      ],
+        ],
       },
       footer: {
         style: 'dark',
