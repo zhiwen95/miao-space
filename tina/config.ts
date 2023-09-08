@@ -51,9 +51,6 @@ export default defineConfig({
             name: "tags",
             type: "string",
             list: true,
-            ui: {
-              component: "tags",
-            },
           },
           {
             type: "rich-text",
