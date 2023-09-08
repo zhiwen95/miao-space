@@ -1,4 +1,5 @@
 import { defineConfig } from "tinacms";
+import { MDXTemplates } from "../src/theme/template";
 
 // Your hosting provider likely exposes this as an environment variable
 const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "main";
@@ -14,7 +15,7 @@ export default defineConfig({
   },
   media: {
     tina: {
-      mediaRoot: "",
+      mediaRoot: "img/blog",
       publicFolder: "static",
     },
   },
@@ -23,7 +24,8 @@ export default defineConfig({
       {
         name: "post",
         label: "Posts",
-        path: "content/posts",
+        path: "blog",
+        format: "mdx",
         fields: [
           {
             type: "string",
@@ -33,13 +35,64 @@ export default defineConfig({
             required: true,
           },
           {
+            name: "authors",
+            label: "Authors",
+            type: "object",
+            list: true,
+            ui: {
+              itemProps: (item) => {
+                return { label: item?.name };
+              },
+            },
+            fields: [
+              {
+                name: "name",
+                label: "Name",
+                type: "string",
+                isTitle: true,
+                required: true,
+              },
+              {
+                name: "title",
+                label: "Title",
+                type: "string",
+              },
+              {
+                name: "url",
+                label: "URL",
+                type: "string",
+              },
+              {
+                name: "image_url",
+                label: "Image URL",
+                type: "string",
+              },
+            ],
+          },
+          {
+            name: "date",
+            label: "Date",
+            type: "string",
+            required: true,
+          },
+          {
+            label: "Tags",
+            name: "tags",
+            type: "string",
+            list: true,
+            ui: {
+              component: "tags",
+            },
+          },
+          {
             type: "rich-text",
             name: "body",
             label: "Body",
             isBody: true,
+            templates: [...MDXTemplates],
           },
         ],
-      },
+      }
     ],
   },
 });

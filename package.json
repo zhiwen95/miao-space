@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
+    "tina": "tinacms dev -c \"yarn start\" ",
     "start": "docusaurus start --host 0.0.0.0 --port 7000",
     "build": "tinacms build && docusaurus build",
     "swizzle": "docusaurus swizzle",
