@@ -25,7 +25,7 @@ export default defineConfig({
         name: "post",
         label: "Posts",
         path: "blog",
-        format: "mdx",
+        format: "md",
         fields: [
           {
             type: "string",
@@ -37,37 +37,9 @@ export default defineConfig({
           {
             name: "authors",
             label: "Authors",
-            type: "object",
+            type: "string",
+            required: true,
             list: true,
-            ui: {
-              itemProps: (item) => {
-                return { label: item?.name };
-              },
-            },
-            fields: [
-              {
-                name: "name",
-                label: "Name",
-                type: "string",
-                isTitle: true,
-                required: true,
-              },
-              {
-                name: "title",
-                label: "Title",
-                type: "string",
-              },
-              {
-                name: "url",
-                label: "URL",
-                type: "string",
-              },
-              {
-                name: "image_url",
-                label: "Image URL",
-                type: "string",
-              },
-            ],
           },
           {
             name: "date",
