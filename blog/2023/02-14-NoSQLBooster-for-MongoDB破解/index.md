@@ -8,7 +8,9 @@ title: NoSQLBooster for MongoDB 破解
 import Image from '@theme/IdealImage';
 
 > macos、windows、linux 通用
+
 <!-- truncate -->
+
 ## 工作原理
 
 NoSQLBooster for MongoDB 使用 electron 编写，修改 app.asar 包里的代码就可以修改运行逻辑。
@@ -21,7 +23,7 @@ asar 是一个打压缩包的工具
 2. 执行命令
 
 ```bash
-# 安装 asar 
+# 安装 asar
 $ npm install asar -g
 # 找到 NoSQLBooster for MongoDB 安装目录，进入 resources 文件夹，macos 的话在 app 里面
 $ cd C:\Users\Administrator\AppData\Local\Programs\nosqlbooster4mongo\resources
@@ -51,7 +53,7 @@ $ asar pack app app.asar
 
 只要自动更新地址访问不通它就不会自动更新。
 
-resources 文件夹下有个  app-update.yml 里面的内容应该是这样的
+resources 文件夹下有个 app-update.yml 里面的内容应该是这样的
 
 ```yaml
 provider: generic
