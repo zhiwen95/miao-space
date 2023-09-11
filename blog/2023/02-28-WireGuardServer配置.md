@@ -4,6 +4,7 @@ slug: wireguard-server
 tags: [软件]
 title: Unraid 笔记
 ---
+
 ## 安装 WireGuard
 
 ```
@@ -12,7 +13,9 @@ $ sudo wg
 # 安装
 $ sudo apt install wireguard
 ```
+
 <!-- truncate -->
+
 ## 配置文件示例
 
 ```
@@ -61,7 +64,7 @@ AllowedIPs = 192.168.6.2/32
 
 :::
 
-1. 根据系统版本下载 `wireguard-ui` 二进制文件，例如 https://github.com/ngoduykhanh/wireguard-ui/releases/download/v0.4.0/wireguard-ui-v0.4.0-linux-amd64.tar.gz 
+1. 根据系统版本下载 `wireguard-ui` 二进制文件，例如 https://github.com/ngoduykhanh/wireguard-ui/releases/download/v0.4.0/wireguard-ui-v0.4.0-linux-amd64.tar.gz
 2. 启动
 
 ```
@@ -84,17 +87,16 @@ iptables -D FORWARD -i %i -j ACCEPT; iptables -D FORWARD -o %i -j ACCEPT; iptabl
 ## 路由规则
 
 1. 启动规则
-    
-    ```
-    iptables -A FORWARD -i %i -j ACCEPT; iptables -A FORWARD -o %i -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
-    ```
-    
+
+   ```
+   iptables -A FORWARD -i %i -j ACCEPT; iptables -A FORWARD -o %i -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+   ```
+
 2. 关闭规则
-    
-    ```
-    iptables -D FORWARD -i %i -j ACCEPT; iptables -D FORWARD -o %i -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
-    ```
-    
+
+   ```
+   iptables -D FORWARD -i %i -j ACCEPT; iptables -D FORWARD -o %i -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
+   ```
 
 ## 进程管理
 

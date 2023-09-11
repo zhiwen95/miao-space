@@ -4,7 +4,9 @@ slug: spring-rest-template-disable-ssl-validation
 tags: [技术]
 title: Spring RestTemplate 关闭 SSL 验证
 ---
+
 <!-- truncate -->
+
 ## 适用于 Apache HttpClient
 
 ```java

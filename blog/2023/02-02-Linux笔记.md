@@ -4,10 +4,12 @@ slug: linux
 tags: [服务器]
 title: Linux 笔记
 ---
+
 <!-- truncate -->
+
 ## 配置
 
-### sudo免密
+### sudo 免密
 
 ```bash
 $ sudo vi /etc/sudoers

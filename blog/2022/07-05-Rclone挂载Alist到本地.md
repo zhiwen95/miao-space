@@ -4,18 +4,22 @@ slug: rclone-mount-alist
 tags: [服务器]
 title: Linux Rclone 挂载 AList 到本地
 ---
+
 - [AList](https://github.com/alist-org/alist/blob/main/README_cn.md) - 一个支持多存储的文件列表程序，支持各种协议
 - Rclone - 支持 WebDAV 协议挂载本地空间
 - Docker - 在容器中运行 Rclone，我的物理机不能安装 Rclone
 
 注意：限速严重的网盘基本没法用，比如某度免费账号
+
 <!-- truncate -->
+
 ## 部署
 
 1.  创建两个配置文件，执行`docker-compose up -d`启动容器，alist 访问地址为 IP:5244 进去配一下基本信息。
+
 - `.env`
-    - APPDATA - 容器数据保存目录
-    - MOUNT_POINT - 网盘挂载点，需要提前 `mkdir`
+  - APPDATA - 容器数据保存目录
+  - MOUNT_POINT - 网盘挂载点，需要提前 `mkdir`
 
 ```
 APPDATA=/opt/yunpan-mount
@@ -70,34 +74,20 @@ $ docker run -it --rm --name rclone-g rclone/rclone config
 我的控制台日志
 
 - No remotes found, make a new one?
-    
-    > n
-    
+  > n
 - Type of storage to configure.
-    
-    > webdav
-    
-- url（IP换成 alist 的）
-    
-    > http://IP:5244/dav/
-    
+  > webdav
+- url（IP 换成 alist 的）
+  > http://IP:5244/dav/
 - Name of the Webdav site/service/software you are using.
-    
-    > other
-    
+  > other
 - 用户名和密码（输入 alist 管理员信息）
 - bearer_token
-    
-    回车
-    
+  回车
 - Edit advanced config?
-    
-    回车
-    
+  回车
 - y) Yes this is OK (default)
-    
-    到这步就不要操作了，配置文件已经生成了，要去把配置复制出来，再开一个 ssh 执行
-    
+  到这步就不要操作了，配置文件已经生成了，要去把配置复制出来，再开一个 ssh 执行
 
 ```bash
 docker exec rclone-g cat /config/rclone/rclone.conf > /opt/yunpan-mount/rclone-alist/config/.rclone.conf

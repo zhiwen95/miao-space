@@ -4,12 +4,14 @@ slug: flink
 tags: [技术]
 title: Flink 笔记
 ---
+
 ## QA
 
-### 运行7天后 Checkpoint IO 出现 hadoop InvalidToken 导致 Failed to trigger checkpoint
+### 运行 7 天后 Checkpoint IO 出现 hadoop InvalidToken 导致 Failed to trigger checkpoint
 
 - 相关日志
 <!-- truncate -->
+
 ```
 2023-04-10 15:16:05.056 [jobmanager-io-thread-10] WARN  org.apache.hadoop.ipc.Client  - Exception encountered while connecting to the server : org.apache.hadoop.ipc.RemoteException(org.apache.hadoop.security.token.SecretManager$InvalidToken): token (token for hdfs: HDFS_DELEGATION_TOKEN owner=hdfs/com66, renewer=yarn, realUser=, issueDate=1680504045174, maxDate=1681108845174, sequenceNumber=21818, masterKeyId=58) can't be found in cache
 2023-04-10 15:16:05.059 [Checkpoint Timer] INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator  - Failed to trigger checkpoint for job 045e5c5ec32df9b607bd01acc9e2ea37 because An Exception occurred while triggering the checkpoint. IO-problem detected.
@@ -53,7 +55,7 @@ title: Flink 笔记
 
 - 描述
 
-Kafka 客户端在 poll 时会申请 Direct Memory，此时如果kafka消息比较大的话容易产生 Direct Memory 溢出
+Kafka 客户端在 poll 时会申请 Direct Memory，此时如果 kafka 消息比较大的话容易产生 Direct Memory 溢出
 
 - 解决办法
 

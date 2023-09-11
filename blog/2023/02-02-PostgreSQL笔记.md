@@ -4,12 +4,14 @@ slug: postgresql
 tags: [数据库]
 title: PostgreSQL 笔记
 ---
+
 <!-- truncate -->
+
 ## 资料
 
 [Azure Database for PostgreSQL 文档](https://docs.microsoft.com/zh-cn/azure/postgresql/)
 
-[3年部署3000套PG实例的架构设计与踩坑经验 - PGSQL - dbaplus社群：围绕Data、Blockchain、AiOps的企业级专业社群。技术大咖、原创干货，每天精品原创文章推送，每周线上技术分享，每月线下技术沙龙。](https://dbaplus.cn/news-19-3523-1.html)
+[3 年部署 3000 套 PG 实例的架构设计与踩坑经验 - PGSQL - dbaplus 社群：围绕 Data、Blockchain、AiOps 的企业级专业社群。技术大咖、原创干货，每天精品原创文章推送，每周线上技术分享，每月线下技术沙龙。](https://dbaplus.cn/news-19-3523-1.html)
 
 ## 配置
 

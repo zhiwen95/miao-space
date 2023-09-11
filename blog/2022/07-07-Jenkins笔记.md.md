@@ -7,6 +7,7 @@ title: Jenkins 笔记
 ---
 
 <!-- truncate -->
+
 ## 修改插件下载源
 
 1. 配置清华源
@@ -19,11 +20,11 @@ title: Jenkins 笔记
 
 方式一：手动修改文件
 
-  把 https://updates.jenkins.io/download 改为 http://mirrors.tuna.tsinghua.edu.cn/jenkins
+把 https://updates.jenkins.io/download 改为 http://mirrors.tuna.tsinghua.edu.cn/jenkins
 
 方式二：使用构建修改文件
 
-  新建一个 Freestyle project 构建，在构建里添加一个 Execute shell 内容如下
+新建一个 Freestyle project 构建，在构建里添加一个 Execute shell 内容如下
 
 ```bash
 sed -i 's/https:\\/\\/updates.jenkins.io\\/download/http:\\/\\/mirrors.tuna.tsinghua.edu.cn\\/jenkins/g' /root/.jenkins/updates/default.json
